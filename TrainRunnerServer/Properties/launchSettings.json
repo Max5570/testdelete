@@ -1,0 +1,18 @@
+﻿{
+  "profiles": {
+    "TrainRunner": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "http://localhost:5000",
+      "Certificate": {
+        "Path": "/etc/ssl/certs/aspnet.crt",
+        "KeyPath": "/etc/ssl/private/aspnet.key"
+      },
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "gsNBi1oGRqmwScCEKdTDJTriiM1N8SK5+BdPpsvhEQw=",
+  "Source": "TrainRunnerServer",
+  "BasePath": "_content/TrainRunnerServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
