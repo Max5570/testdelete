@@ -9,6 +9,7 @@ public class ApplicationDbContext : IdentityDbContext<UserModel>
 {
     public DbSet<TrainModel> Trains { get; set; }
     public DbSet<TrainPassiveRewardModel> TrainRewards { get; set; }
+    public DbSet<UserResourceModel> UserResources { get; set; }
     
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
@@ -23,6 +24,9 @@ public class ApplicationDbContext : IdentityDbContext<UserModel>
             .OwnsOne(x => x.SettingsModel);
         
         modelBuilder.Entity<UserModel>()
-            .OwnsOne(x => x.PassiveRewardModel);
+            .HasMany(x => x.UserResources)
+            .WithOne(x => x.User)
+            .HasForeignKey(x => x.UserModelId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }

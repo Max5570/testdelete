@@ -29,13 +29,13 @@ public class ResourcesController : ControllerBase
             return NotFound();
         }
         
-        user.Gold = querryModel.Gold;
-        
-        await _userManager.UpdateAsync(user);
+        // user.Gold = querryModel.Gold;
+        //
+        // await _userManager.UpdateAsync(user);
     
         return Ok(new
             {
-                Gold = user.Gold
+                Gold = 100
             });
     }
     
@@ -51,7 +51,7 @@ public class ResourcesController : ControllerBase
 
         return Ok(new
         {
-            Gold = user.Gold
+            Gold = 100
         });
     }
 }

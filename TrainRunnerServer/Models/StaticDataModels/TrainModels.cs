@@ -8,7 +8,7 @@ public class TrainModel
 {
     public int Id { get; set; }
     [JsonConverter(typeof(StringEnumConverter<,,>))]
-    public TrainType TrainType { get; set; }
+    public Train Type { get; set; }
     public List<TrainPassiveRewardModel> PassiveRewards { get; set; } = new();
 }
 
@@ -22,7 +22,7 @@ public class TrainPassiveRewardModel
     public TrainModel TrainModel { get; set; }
 }
 
-public enum TrainType
+public enum Train
 {
     TrainLevel1 = 1,
     TrainLevel2 = 2,

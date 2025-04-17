@@ -39,20 +39,37 @@ public class AuthentificationController : ControllerBase
         }
         
         var newUser = new UserModel() { UserName = querry.UserName };
-        var result = await _userManager.CreateAsync(newUser, querry.Password);
-        
-        if (!result.Succeeded)
+        InitializeUser(newUser);
+
+        try
         {
-            foreach (var error in result.Errors)
+            var result = await _userManager.CreateAsync(newUser, querry.Password);
+            
+            if (!result.Succeeded)
             {
-                ModelState.AddModelError("Error", $"{error.Code}, {error.Description}");
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("Error", $"{error.Code}, {error.Description}");
+                }
+                return BadRequest(ModelState);
             }
-            return BadRequest(ModelState);
         }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+        
+        
         
         return Ok();
     }
-    
+
+    private void InitializeUser(UserModel userModel)
+    {
+        userModel.LastTimeRewardClaimed = DateTime.UtcNow;
+    }
+
     [HttpPost("[action]")]
     public async Task<IActionResult> Login([FromBody] RegisterPlayerQuerryModel querry)
     {
