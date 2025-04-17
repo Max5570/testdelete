@@ -22,7 +22,7 @@ public class PassiveResourcesController : Controller
     }
 
     [HttpPost("[action]")]
-    public async Task<IActionResult> GetReward([FromBody] string data)
+    public async Task<IActionResult> GetReward()
     {
         var user = await _userManager.GetUserAsync(User);
 
@@ -46,7 +46,7 @@ public class PassiveResourcesController : Controller
     }
     
     [HttpPost("[action]")]
-    public async Task<IActionResult> CheckReward([FromBody] string header)
+    public async Task<IActionResult> CheckReward()
     {
         var user = await _userManager.GetUserAsync(User);
 
@@ -61,7 +61,7 @@ public class PassiveResourcesController : Controller
     }
     
     [HttpPost("[action]")]
-    public async Task<IActionResult> AddTimeTest([FromBody] string header)
+    public async Task<IActionResult> AddTimeTest()
     {
         var user = await _userManager.GetUserAsync(User);
 

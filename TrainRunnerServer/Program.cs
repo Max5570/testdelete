@@ -18,7 +18,7 @@ builder.Services.AddSingleton<StaticDataManager>();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-    options.UseNpgsql(connectionString);
+    options.UseNpgsql(connectionString).UseLazyLoadingProxies();
 });
 
 builder.Services.AddIdentity<UserModel, IdentityRole>()

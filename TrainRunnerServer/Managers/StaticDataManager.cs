@@ -9,7 +9,7 @@ public class StaticDataManager
 
     public StaticDataManager()
     {
-        var jsonContent = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Resources", "train_data.json"));
+        var jsonContent = File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "Resources", "train_data.json"));
         var trains = JsonConvert.DeserializeObject<List<TrainModel>>(jsonContent);
         
         TrainsData = trains;

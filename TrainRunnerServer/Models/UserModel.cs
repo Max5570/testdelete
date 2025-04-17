@@ -7,8 +7,8 @@ public class UserModel : IdentityUser
 {
     public Train CurrentTrain;
     
-    // use utc time!!!
-    public DateTime LastTimeRewardClaimed { get; set; }
-    public List<UserResourceModel> UserResources { get; set; } = new ();
-    public PlayerSettingsModel SettingsModel { get; set; } = new ();
+    public virtual DateTime LastTimeRewardClaimed { get; set; }
+    public virtual List<UserResourceModel> Resources { get; set; } = new ();
+    public virtual List<ReferalModel> Referals { get; set; } = new ();
+    public virtual PlayerSettingsModel Settings { get; set; } = new ();
 }

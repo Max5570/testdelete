@@ -18,6 +18,9 @@ namespace TrainRunnerServer.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "9.0.3")
+                .HasAnnotation("Proxies:ChangeTracking", false)
+                .HasAnnotation("Proxies:CheckEquality", false)
+                .HasAnnotation("Proxies:LazyLoading", true)
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -152,6 +155,28 @@ namespace TrainRunnerServer.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("TrainRunnerServer.Models.ReferalModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("UserModelId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserModelId");
+
+                    b.ToTable("Referals");
                 });
 
             modelBuilder.Entity("TrainRunnerServer.Models.StaticDataModels.TrainModel", b =>
@@ -337,6 +362,17 @@ namespace TrainRunnerServer.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("TrainRunnerServer.Models.ReferalModel", b =>
+                {
+                    b.HasOne("TrainRunnerServer.Models.UserModel", "User")
+                        .WithMany("Referals")
+                        .HasForeignKey("UserModelId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("TrainRunnerServer.Models.StaticDataModels.TrainPassiveRewardModel", b =>
                 {
                     b.HasOne("TrainRunnerServer.Models.StaticDataModels.TrainModel", "TrainModel")
@@ -350,7 +386,7 @@ namespace TrainRunnerServer.Migrations
 
             modelBuilder.Entity("TrainRunnerServer.Models.UserModel", b =>
                 {
-                    b.OwnsOne("TrainRunnerServer.Models.PlayerSettingsModel", "SettingsModel", b1 =>
+                    b.OwnsOne("TrainRunnerServer.Models.PlayerSettingsModel", "Settings", b1 =>
                         {
                             b1.Property<string>("UserModelId")
                                 .HasColumnType("text");
@@ -369,14 +405,14 @@ namespace TrainRunnerServer.Migrations
                                 .HasForeignKey("UserModelId");
                         });
 
-                    b.Navigation("SettingsModel")
+                    b.Navigation("Settings")
                         .IsRequired();
                 });
 
             modelBuilder.Entity("TrainRunnerServer.Models.UserResourceModel", b =>
                 {
                     b.HasOne("TrainRunnerServer.Models.UserModel", "User")
-                        .WithMany("UserResources")
+                        .WithMany("Resources")
                         .HasForeignKey("UserModelId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -391,7 +427,9 @@ namespace TrainRunnerServer.Migrations
 
             modelBuilder.Entity("TrainRunnerServer.Models.UserModel", b =>
                 {
-                    b.Navigation("UserResources");
+                    b.Navigation("Referals");
+
+                    b.Navigation("Resources");
                 });
 #pragma warning restore 612, 618
         }

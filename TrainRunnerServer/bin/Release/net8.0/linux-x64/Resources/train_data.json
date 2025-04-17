@@ -1,0 +1,24 @@
+[
+  {
+    "TrainType": "TrainLevel1",
+    "PassiveRewards": [
+      {
+        "CurrencyPerMinute": 100,
+        "ResourceType": "Gold"
+      },
+      {
+        "CurrencyPerMinute": 50,
+        "ResourceType": "Fragment"
+      }
+    ]
+  },
+  {
+    "TrainType": "TrainLevel2",
+    "PassiveRewards": [
+      {
+        "CurrencyPerMinute": 200,
+        "ResourceType": "Fragment"
+      }
+    ]
+  }
+]

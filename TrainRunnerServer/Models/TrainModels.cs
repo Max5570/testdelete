@@ -9,7 +9,7 @@ public class TrainModel
     public int Id { get; set; }
     [JsonConverter(typeof(StringEnumConverter<,,>))]
     public Train Type { get; set; }
-    public List<TrainPassiveRewardModel> PassiveRewards { get; set; } = new();
+    public virtual List<TrainPassiveRewardModel> PassiveRewards { get; set; } = new();
 }
 
 public class TrainPassiveRewardModel
@@ -19,7 +19,7 @@ public class TrainPassiveRewardModel
     [JsonConverter(typeof(StringEnumConverter<,,>))]
     public Resources ResourceType { get; set; }
     public int TrainModelId { get; set; }
-    public TrainModel TrainModel { get; set; }
+    public virtual TrainModel TrainModel { get; set; }
 }
 
 public enum Train

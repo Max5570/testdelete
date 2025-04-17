@@ -8,7 +8,7 @@ public class UserResourceModel
     public Resources Resource  { get; set; }
     public int Count  { get; set; }
     public string UserModelId  { get; set; }
-    public UserModel User  { get; set; }
+    public virtual UserModel User  { get; set; }
 
     public UserResourceModel() {}
     
