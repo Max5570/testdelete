@@ -5,6 +5,7 @@ C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\TrainRunnerServer.dll
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\TrainRunnerServer.runtimeconfig.json
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\TrainRunnerServer.pdb
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\BCrypt.Net.dll
+C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Castle.Core.dll
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
@@ -14,6 +15,7 @@ C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Microsoft.Bcl.Memory.dll
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Microsoft.Data.Sqlite.dll
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Microsoft.EntityFrameworkCore.dll
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Microsoft.EntityFrameworkCore.Proxies.dll
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Microsoft.EntityFrameworkCore.Sqlite.dll
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Microsoft.Extensions.Caching.Abstractions.dll

@@ -155,3 +155,5 @@ C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\TrainRunnerServer\bin\Release\
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\TrainRunnerServer\bin\Release\net8.0\linux-x64\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\TrainRunnerServer\bin\Release\net8.0\linux-x64\Resources\train_data.json
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\TrainRunnerServer\bin\Release\net8.0\linux-x64\Newtonsoft.Json.dll
+C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\TrainRunnerServer\bin\Release\net8.0\linux-x64\Castle.Core.dll
+C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\TrainRunnerServer\bin\Release\net8.0\linux-x64\Microsoft.EntityFrameworkCore.Proxies.dll
