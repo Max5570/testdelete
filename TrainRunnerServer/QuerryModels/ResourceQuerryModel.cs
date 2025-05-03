@@ -2,6 +2,6 @@
 
 public class ResourceQuerryModel
 {
-    public int ResourceType { get; set; }
+    public int Resource { get; set; }
     public int Value { get; set; }
 }

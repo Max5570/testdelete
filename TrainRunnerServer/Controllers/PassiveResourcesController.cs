@@ -38,7 +38,7 @@ public class PassiveResourcesController : Controller
             user.AddResource(reward.Resource, reward.Count);
         }
         
-        user.LastTimeRewardClaimed = DateTime.UtcNow;
+        user.LastTimePassiveRewardClaimed = DateTime.UtcNow;
 
         await _userManager.UpdateAsync(user);
         
@@ -70,7 +70,7 @@ public class PassiveResourcesController : Controller
             return NotFound();
         }
 
-        user.LastTimeRewardClaimed -= new TimeSpan(0, 0,10,0);
+        user.LastTimePassiveRewardClaimed -= new TimeSpan(0, 0,10,0);
         
         await _userManager.UpdateAsync(user);
         
@@ -81,7 +81,7 @@ public class PassiveResourcesController : Controller
     {
         var trainData = _dataManager.TrainsData.First(x => x.Type == user.CurrentTrain);
 
-        var rewardClaimed = user.LastTimeRewardClaimed;
+        var rewardClaimed = user.LastTimePassiveRewardClaimed;
         var timeDifference = DateTime.UtcNow - rewardClaimed;
         var minutesPast = timeDifference.Minutes;
 

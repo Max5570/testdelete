@@ -31,13 +31,13 @@ public class ResourcesController : ControllerBase
             return NotFound();
         }
         
-        var resource = user.SetResource((Resources)querry.ResourceType, querry.Value);
+        var resource = user.SetResource((Resources)querry.Resource, querry.Value);
 
         await _userManager.UpdateAsync(user);
 
         return Ok(new
         {
-            ResourceType = resource.Resource,
+            Resource = resource.Resource,
             Value = resource.Count
         });
     }
@@ -52,13 +52,13 @@ public class ResourcesController : ControllerBase
             return NotFound();
         }
         
-        var resource = user.AddResource((Resources)querry.ResourceType, querry.Value);
+        var resource = user.AddResource((Resources)querry.Resource, querry.Value);
 
         await _userManager.UpdateAsync(user);
 
         return Ok(new
         {
-            ResourceType = resource.Resource,
+            Resource = resource.Resource,
             Value = resource.Count
         });
     }
@@ -77,7 +77,7 @@ public class ResourcesController : ControllerBase
 
         return Ok(new
         {
-            ResourceType = resource.Resource,
+            Resource = resource.Resource,
             Value = resource.Count
         });
     }

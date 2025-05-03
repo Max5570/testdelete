@@ -67,7 +67,7 @@ public class AuthentificationController : ControllerBase
 
     private void InitializeUser(UserModel userModel)
     {
-        userModel.LastTimeRewardClaimed = DateTime.UtcNow;
+        userModel.LastTimePassiveRewardClaimed = DateTime.UtcNow;
     }
 
     [HttpPost("[action]")]
