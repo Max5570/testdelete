@@ -179,3 +179,7 @@ C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\TrainRunnerServer\bin\Debug\ne
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\TrainRunnerServer\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Proxies.dll
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\TrainRunnerServer\bin\Debug\net8.0\Resources\DailyRewardData.json
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\TrainRunnerServer\bin\Debug\net8.0\Resources\TrainData.json
+C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\TrainRunnerServer\bin\Debug\net8.0\Telegram.Bot.dll
+C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\TrainRunnerServer\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\TrainRunnerServer\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\TrainRunnerServer\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll

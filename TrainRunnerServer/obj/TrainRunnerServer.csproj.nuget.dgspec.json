@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[8.0.14, )"
             },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[8.0.15, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.6, )"
@@ -99,6 +103,10 @@
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[8.7.0, )"
+            },
+            "Telegram.Bot": {
+              "target": "Package",
+              "version": "[22.5.1, )"
             }
           },
           "imports": [

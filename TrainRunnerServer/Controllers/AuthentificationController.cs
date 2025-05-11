@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using TrainRunnerServer.Database;
+using TrainRunnerServer.Managers;
 using TrainRunnerServer.Models;
 using TrainRunnerServer.Querry;
 
@@ -18,9 +19,14 @@ public class AuthentificationController : ControllerBase
     private readonly UserManager<UserModel> _userManager;
     private readonly SignInManager<UserModel> _signInManager;
     private readonly IConfiguration _config;
+    private readonly TelegramBotManager _telegramBotManager;
     
-    public AuthentificationController(ApplicationDbContext dbContext, IConfiguration config, UserManager<UserModel> userManager, SignInManager<UserModel> signInManager)
+    public AuthentificationController(ApplicationDbContext dbContext, IConfiguration config, 
+        UserManager<UserModel> userManager, 
+        SignInManager<UserModel> signInManager,
+        TelegramBotManager telegramBotManager)
     {
+        _telegramBotManager = telegramBotManager;
         _userManager = userManager;
         _signInManager = signInManager;
         _dbContext = dbContext;

@@ -1,6 +1,7 @@
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\TrainRunnerServer
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\appsettings.json
-C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Resources\train_data.json
+C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Resources\DailyRewardData.json
+C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Resources\TrainData.json
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\TrainRunnerServer.dll
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\TrainRunnerServer.runtimeconfig.json
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\TrainRunnerServer.pdb
@@ -10,6 +11,8 @@ C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Microsoft.AspNetCore.Aut
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Microsoft.Bcl.Memory.dll
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Microsoft.Data.Sqlite.dll
@@ -38,6 +41,7 @@ C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Microsoft.IdentityModel.
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Microsoft.OpenApi.dll
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Newtonsoft.Json.dll
+C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Newtonsoft.Json.Bson.dll
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Npgsql.dll
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\SQLitePCLRaw.batteries_v2.dll
@@ -51,5 +55,6 @@ C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\System.IdentityModel.Tok
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\System.IO.Pipelines.dll
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\System.Text.Encodings.Web.dll
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\System.Text.Json.dll
+C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\Telegram.Bot.dll
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\libe_sqlite3.so
 C:\Users\Max\Desktop\DreamCraft\TrainRunnerServer\Build\TrainRunnerServer.deps.json

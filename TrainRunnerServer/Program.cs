@@ -38,6 +38,22 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidAudience = builder.Configuration["Auth:Audience"],
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Auth:Key"]))
         };
+        
+        options.Events = new JwtBearerEvents
+        {
+            OnMessageReceived = context =>
+            {
+                var accessToken = context.Request.Query["token"];
+
+                var path = context.HttpContext.Request.Path;
+                if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/WebSocket"))
+                {
+                    context.Token = accessToken;
+                }
+
+                return Task.CompletedTask;
+            }
+        };
     });
 
 builder.Services.AddAuthorization(); 
@@ -53,6 +69,8 @@ builder.Services.AddCors(options =>
         });
 });
 
+builder.Services.AddSingleton(new TelegramBotManager());
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -63,6 +81,8 @@ var app = builder.Build();
 // }
 
 app.UseCors("AllowAll");
+
+app.UseWebSockets();
 
 app.UseHttpsRedirection();
 

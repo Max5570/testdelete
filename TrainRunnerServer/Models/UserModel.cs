@@ -5,8 +5,7 @@ namespace TrainRunnerServer.Models;
 
 public class UserModel : IdentityUser
 {
-    public Train CurrentTrain;
-    
+    public virtual Train CurrentTrain { get; set; }
     public virtual DateTime LastTimePassiveRewardClaimed { get; set; }
     public virtual DateTime LastTimeDailyRewardClaimed { get; set; }
     public virtual List<UserResourceModel> Resources { get; set; } = new ();
