@@ -14,6 +14,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<StaticDataManager>();
+builder.Services.AddSingleton<TelegramBotManager>();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
@@ -69,9 +70,10 @@ builder.Services.AddCors(options =>
         });
 });
 
-builder.Services.AddSingleton(new TelegramBotManager());
 
 var app = builder.Build();
+
+_ = app.Services.GetRequiredService<TelegramBotManager>();
 
 // Configure the HTTP request pipeline.
 // if (app.Environment.IsDevelopment())
